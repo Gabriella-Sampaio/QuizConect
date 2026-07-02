@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultor Etec Telecom - Descubra seu Plano Ideal</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        
+        <!-- ========== TELA 1: BOAS-VINDAS ========== -->
+        <div class="tela ativa" id="tela-inicio">
+            <img src="assets/img/logo-etec.png" alt="Etec Telecom" class="logo">
+            <h1>Sua internet é a ideal pra você?</h1>
+            <p class="subtitulo">Responda 8 perguntas e descubra em 2 minutos se você está no plano certo — ou se está pagando caro por algo que nem usa.</p>
+            
+            <div class="selo">
+                ⭐ Recomendado pela Etec Telecom Praia Grande
+            </div>
+            
+            <button class="btn-comecar" onclick="irParaQuiz()">
+                🔍 Quero descobrir meu plano ideal
+            </button>
+            
+            <p class="info-extra">Grátis • Sem cadastro • Resultado na hora</p>
+        </div>
+
+        <!-- ========== TELA 2: QUIZ ========== -->
+        <div class="tela" id="tela-quiz">
+            <!-- Barra de progresso -->
+            <div class="progresso-container">
+                <div class="barra-progresso">
+                    <div class="preenchimento" id="barra"></div>
+                </div>
+                <span id="texto-progresso">Pergunta 1 de 8</span>
+            </div>
+
+            <!-- Container das perguntas -->
+            <div id="container-perguntas"></div>
+
+            <!-- Navegação -->
+            <div class="navegacao">
+                <button class="btn-voltar" id="btn-voltar" onclick="voltarPergunta()" style="display:none;">
+                    ← Voltar
+                </button>
+                <button class="btn-proximo" id="btn-proximo" onclick="proximaPergunta()">
+                    Próximo →
+                </button>
+                <button class="btn-descobrir" id="btn-descobrir" onclick="calcularResultado()" style="display:none;">
+                    🔍 Descobrir meu plano ideal!
+                </button>
+            </div>
+        </div>
+
+        <!-- ========== TELA 3: RESULTADO ========== -->
+        <div class="tela" id="tela-resultado">
+            <div id="resultado-conteudo"></div>
+            <button class="btn-refazer" onclick="refazerQuiz()">🔄 Fazer novamente</button>
+        </div>
+
+    </div>
+
+    <script src="assets/js/motor.js"></script>
+    <script src="assets/js/quiz.js"></script>
+</body>
+</html>
