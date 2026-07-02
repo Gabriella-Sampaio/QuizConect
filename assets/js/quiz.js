@@ -1,11 +1,6 @@
-// ============================================
-// NAVEGAÇÃO DO QUIZ
-// ============================================
-
 let perguntaAtual = 0;
 const container = document.getElementById('container-perguntas');
 
-// Iniciar quiz
 function irParaQuiz() {
     document.getElementById('tela-inicio').classList.remove('ativa');
     document.getElementById('tela-quiz').classList.add('ativa');
@@ -62,7 +57,7 @@ function proximaPergunta() {
     const selecionado = Array.from(cards).some(c => c.classList.contains('selecionado'));
     
     if (!selecionado) {
-        alert('😊 Selecione uma opção antes de continuar!');
+        alert('Selecione uma opção antes de continuar!');
         return;
     }
     
@@ -157,7 +152,7 @@ function calcularResultado() {
     
     const resultadoHTML = `
         <div class="resultado-header" style="background: ${plano.cor}">
-            <h2>✨ Seu Plano Ideal</h2>
+            <h2>Seu Plano Ideal</h2>
             <p class="perfil-detectado">Perfil identificado: <strong>${plano.perfil}</strong></p>
         </div>
         
@@ -177,14 +172,18 @@ function calcularResultado() {
                 </div>
             ` : ''}
             
-            <a href="https://wa.me/5513XXXXX?text=Olá!%20Fiz%20o%20quiz%20e%20quero%20contratar%20o%20${encodeURIComponent(plano.nome)}" 
+            <a href="https://api.whatsapp.com/send?phone=551334211999&text=Ol%C3%A1!%20Vim%20do%20site!" 
                class="btn-whatsapp" target="_blank" style="background: ${plano.cor}">
                 💬 Quero contratar este plano!
             </a>
             
             <p class="info-contato">
-                📞 (13) XXXX-XXXX<br>
-                📍 Praia Grande - SP
+            <br><br>
+                <img src="assets/img/logo-etec.png" alt="Etec Telecom" class="logo">
+                📞 (13) 3421-1999 ✉ contato@eteccnet.com.br<br>
+                📍 R. Dair Borges, 41 - Boqueirão, Praia Grande - SP, 11701-210<br>
+                🕑Segunda a Sexta: 9:00 às 18:00, Sábado: 9:00 às 13:00
+                
             </p>
         </div>
     `;

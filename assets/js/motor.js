@@ -6,10 +6,10 @@
 const perguntas = [
     {
         id: 'perfil',
-        titulo: '📱 O que você mais faz na internet?',
+        titulo: 'O que você mais faz na internet?',
         dica: 'Escolha a atividade principal do seu dia a dia.',
         opcoes: [
-            { valor: 'streaming', texto: 'Assistir filmes e séries', icone: '🎬', peso: 30 },
+            { valor: 'streaming', texto: 'Assistir filmes e séries', icone: '🎬', peso: 25 },
             { valor: 'trabalho', texto: 'Trabalhar e estudar', icone: '💼', peso: 25 },
             { valor: 'jogos', texto: 'Jogar online', icone: '🎮', peso: 40 },
             { valor: 'redes', texto: 'Redes sociais e WhatsApp', icone: '📱', peso: 10 },
@@ -18,7 +18,7 @@ const perguntas = [
     },
     {
         id: 'pessoas',
-        titulo: '👥 Quantas pessoas dividem a internet com você?',
+        titulo: 'Quantas pessoas dividem a internet com você?',
         dica: 'Inclua todo mundo: família, visitas frequentes. Cada pessoa extra exige mais da sua conexão.',
         opcoes: [
             { valor: '1', texto: 'Só eu', icone: '🧍', peso: 5 },
@@ -29,7 +29,7 @@ const perguntas = [
     },
     {
         id: 'dispositivos',
-        titulo: '📱 Quantos aparelhos ficam conectados ao mesmo tempo?',
+        titulo: 'Quantos aparelhos ficam conectados ao mesmo tempo?',
         dica: 'Celular, TV, notebook, Alexa, câmera, videogame... Tudo junto conta!',
         opcoes: [
             { valor: '1-2', texto: '1 ou 2 aparelhos', icone: '📱💻', peso: 5 },
@@ -39,7 +39,7 @@ const perguntas = [
     },
     {
         id: 'qualidade',
-        titulo: '🎬 Que tipo de streaming você consome?',
+        titulo: 'Que tipo de streaming você consome?',
         dica: 'Ver Netflix no celular é bem diferente de assistir em 4K na TV de 55"',
         opcoes: [
             { valor: 'hd', texto: 'Qualidade normal (Full HD)', icone: '📺', peso: 10 },
@@ -49,7 +49,7 @@ const perguntas = [
     },
     {
         id: 'internet_atual',
-        titulo: '🤔 E sua internet atual, como está?',
+        titulo: 'E sua internet atual, como está?',
         dica: 'Seja sincero(a). Muita gente paga caro por um plano que não usa — ou sofre com um plano que não aguenta.',
         opcoes: [
             { valor: 'nenhuma', texto: 'Não tenho internet ainda', icone: '🔍', peso: 0 },
@@ -60,7 +60,7 @@ const perguntas = [
     },
     {
         id: 'moradia',
-        titulo: '🏠 Qual o tamanho da sua residência?',
+        titulo: 'Qual o tamanho da sua residência?',
         dica: 'Casa grande ou com quintal precisa de um reforço para o Wi-Fi chegar em todo canto.',
         opcoes: [
             { valor: 'kitnet', texto: 'Kitnet ou apartamento pequeno', icone: '🏢', peso: 0 },
@@ -71,17 +71,17 @@ const perguntas = [
     },
     {
         id: 'futuro',
-        titulo: '🚀 Pensando no futuro, o que você prefere?',
+        titulo: 'Pensando no futuro, o que você prefere?',
         dica: 'A internet ideal não é a que você precisa hoje. É a que vai te atender bem nos próximos meses.',
         opcoes: [
             { valor: 'basico', texto: 'O básico que funcione', icone: '✅', peso: 0 },
-            { valor: 'tranquilo', texto: 'Ficar tranquilo(a) por um bom tempo', icone: '😌', peso: 15 },
+            { valor: 'tranquilo', texto: 'Ficar tranquilo(a) por um bom tempo', icone: '😌', peso: 10 },
             { valor: 'melhor', texto: 'Quero o melhor, sem dor de cabeça', icone: '👑', peso: 30 }
         ]
     },
     {
         id: 'horario',
-        titulo: '⏰ Qual horário você mais usa a internet?',
+        titulo: 'Qual horário você mais usa a internet?',
         dica: 'O horário de pico influencia na velocidade disponível na sua região.',
         opcoes: [
             { valor: 'diurno', texto: 'Durante o dia (trabalho/estudo)', icone: '☀️', peso: 5 },
@@ -118,31 +118,31 @@ function determinarPlano() {
     
     if (pontuacao <= 50) {
         plano = {
-            nome: '🌱 Plano Básico',
-            velocidade: '300 Mega',
-            preco: 'R$ 79,90',
+            nome: '🌱 Plano Móvel',
+            velocidade: '1 GB',
+            preco: 'A partir de R$ 29,90',
             descricao: 'Perfeito para uso individual. Navegação, redes sociais e streaming leve sem travamentos.',
-            cor: '#4CAF50',
+            cor: '#F44336',
             mesh: false,
             perfil: 'Uso Leve e Individual'
         };
     } else if (pontuacao <= 100) {
         plano = {
             nome: '🌿 Plano Intermediário',
-            velocidade: '500 Mega',
-            preco: 'R$ 99,90',
+            velocidade: '600 Mega',
+            preco: 'R$ 109,90',
             descricao: 'Equilíbrio ideal para famílias pequenas. Streaming em Full HD e home office sem preocupações.',
-            cor: '#2196F3',
+            cor: '#F44336',
             mesh: false,
             perfil: 'Uso Familiar Moderado'
         };
     } else if (pontuacao <= 140) {
         plano = {
             nome: '🌳 Plano Avançado',
-            velocidade: '700 Mega',
+            velocidade: '800 Mega',
             preco: 'R$ 129,90',
             descricao: 'Potência para streaming 4K, home office intenso e jogos online com baixa latência.',
-            cor: '#FF9800',
+            cor: '#F44336',
             mesh: false,
             perfil: 'Usuário Exigente'
         };
@@ -150,7 +150,7 @@ function determinarPlano() {
         plano = {
             nome: '🏆 Plano Premium',
             velocidade: '1 Giga',
-            preco: 'R$ 179,90',
+            preco: 'R$ 149,90',
             descricao: 'Performance máxima para casas com muitos dispositivos. Streaming 4K, jogos competitivos e trabalho pesado, tudo ao mesmo tempo.',
             cor: '#F44336',
             mesh: true,
@@ -162,7 +162,7 @@ function determinarPlano() {
             velocidade: '1 Giga + Wi-Fi Mesh',
             preco: 'R$ 209,90',
             descricao: 'O melhor da Etec! Ultra velocidade + Wi-Fi Mesh para cada canto da sua casa. Para quem não aceita internet meia-boca.',
-            cor: '#9C27B0',
+            cor: '#F44336',
             mesh: true,
             perfil: 'Power User - Máximo Desempenho'
         };

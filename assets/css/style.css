@@ -4,9 +4,15 @@
     box-sizing: border-box;
 }
 
+.header {
+    background-color: #da5757;
+    margin: 10;
+    padding: 0;
+}
+
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #0d47a1 0%, #1565c0 50%, #1976d2 100%);
+    background: linear-gradient(135deg, #be5353 0%, #c01515 50%, #5f2323 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -65,8 +71,8 @@ h1 {
 }
 
 .selo {
-    background: #e8f5e9;
-    color: #2e7d32;
+    background: #f5e8e8;
+    color: #000000;
     padding: 10px 20px;
     border-radius: 50px;
     font-size: 14px;
@@ -79,7 +85,7 @@ h1 {
     display: block;
     width: 100%;
     padding: 16px;
-    background: linear-gradient(135deg, #1a73e8, #0d47a1);
+    background: linear-gradient(#c01515);
     color: white;
     border: none;
     border-radius: 16px;
@@ -91,7 +97,7 @@ h1 {
 
 .btn-comecar:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(26, 115, 232, 0.4);
+    box-shadow: 0 8px 25px rgba(232, 26, 26, 0.4);
 }
 
 .info-extra {
@@ -116,7 +122,7 @@ h1 {
 
 .preenchimento {
     height: 100%;
-    background: linear-gradient(90deg, #1a73e8, #0d47a1);
+    background: linear-gradient(#c94242);
     width: 0%;
     transition: width 0.4s ease;
     border-radius: 10px;
@@ -165,12 +171,12 @@ h1 {
 }
 
 .card-opcao:hover {
-    border-color: #1a73e8;
+    border-color: #e81a1a;
     background: #f5f8ff;
 }
 
 .card-opcao.selecionado {
-    border-color: #1a73e8;
+    border-color: #e81a1a;
     background: linear-gradient(135deg, #e8f0fe, #f0f4ff);
     box-shadow: 0 4px 15px rgba(26, 115, 232, 0.15);
 }
@@ -215,13 +221,13 @@ h1 {
 }
 
 .btn-proximo {
-    background: #1a73e8;
+    background: #e81a1a;
     color: white;
     margin-left: auto;
 }
 
 .btn-descobrir {
-    background: linear-gradient(135deg, #1a73e8, #0d47a1);
+    background: linear-gradient(135deg, #e81a1a, #a10d0d);
     color: white;
     margin-left: auto;
     font-size: 16px;
