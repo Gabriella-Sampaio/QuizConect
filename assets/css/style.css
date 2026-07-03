@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .header {
     background-color: #da5757;
     margin: 10;
@@ -315,7 +320,7 @@ h1 {
 .barra-fundo {
     flex: 1;
     height: 10px;
-    background: #eee;
+    background: #fffafa;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -334,12 +339,12 @@ h1 {
 
 /* Alerta Mesh */
 .alerta-mesh {
-    background: #FFF3CD;
-    border-left: 4px solid #FFC107;
+    background: #ffe0e0;
+    border-left: 4px solid #ff0707;
     padding: 14px 16px;
     border-radius: 10px;
     font-size: 14px;
-    color: #856404;
+    color: #380000be;
     text-align: left;
     margin: 15px 0;
 }
